@@ -1,0 +1,48 @@
+{
+  "Name": "Discord",
+  "Description": "Controla Discord",
+  "com.hotspot.streamdock.discord.deaf": {
+    "Name": "Los auriculares están silenciados",
+    "Tooltip": "Los auriculares están silenciados/no silenciados"
+  },
+  "com.hotspot.streamdock.discord.mute": {
+    "Name": "El micrófono está silenciado",
+    "Tooltip": "Silenciar/reactivar el micrófono"
+  },
+  "com.hotspot.streamdock.discord.voicechannel": {
+    "Name": "Canales de voz",
+    "Tooltip": "Únete al canal de voz"
+  },
+  "com.hotspot.streamdock.discord.textchannel": {
+    "Name": "Canales de texto",
+    "Tooltip": "Únete al canal de texto"
+  },
+  "com.hotspot.streamdock.discord.pushtotalk": {
+    "Name": "Mantenga presionado para silenciar",
+    "Tooltip": "Mantenga presionado para silenciar"
+  },
+  "com.hotspot.streamdock.discord.pushtomute": {
+    "Name": "Mantén pulsado para hablar",
+    "Tooltip": "Mantén pulsado para hablar"
+  },
+  "com.hotspot.streamdock.discord.volumeControl": {
+    "Name": "Control de volumen",
+    "Tooltip": "Controlar el volumen del dispositivo de audio"
+  },
+  "Category": "Discord",
+  "Localization": {
+    "请启动Discord":"Por favor, inicia Discord",
+    "请求授权":"Solicitar autorización",
+    "授权":"Autorización",
+    "服务器":"Servidor",
+    "文本通道":"Canales de texto",
+    "设备":"Equipo",
+    "输入":"Entrada",
+    "输出":"Salida",
+    "音量":"Volumen",
+    "语音通道":"Canales de voz",
+    "获取ID": "Traer ID",
+    "CLIENT ID": "CLIENT ID",
+    "https://discord.com/developers/applications": "https://discord.com/developers/applications"
+  }
+}

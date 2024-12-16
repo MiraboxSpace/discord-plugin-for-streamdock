@@ -1,0 +1,48 @@
+{
+  "Name": "Discord",
+  "Description": "Discord kontrollieren",
+  "com.hotspot.streamdock.discord.deaf": {
+    "Name": "Die Kopfhörer sind stummgeschaltet",
+    "Tooltip": "Kopfhörer sind stummgeschaltet/nicht stummgeschaltet"
+  },
+  "com.hotspot.streamdock.discord.mute": {
+    "Name": "Das Mikrofon ist stummgeschaltet",
+    "Tooltip": "Mikrofon stummschalten/Stummschaltung aufheben"
+  },
+  "com.hotspot.streamdock.discord.voicechannel": {
+    "Name": "Sprachkanäle",
+    "Tooltip": "Dem Sprachkanal beitreten"
+  },
+  "com.hotspot.streamdock.discord.textchannel": {
+    "Name": "Textkanäle",
+    "Tooltip": "Dem Textkanal beitreten"
+  },
+  "com.hotspot.streamdock.discord.pushtotalk": {
+    "Name": "Push-to-Mute",
+    "Tooltip": "Push-to-Mute"
+  },
+  "com.hotspot.streamdock.discord.pushtomute": {
+    "Name": "Push-to-Talk",
+    "Tooltip": "Push-to-Talk"
+  },
+  "com.hotspot.streamdock.discord.volumeControl": {
+    "Name": "Lautstärkeregler",
+    "Tooltip": "Steuern der Lautstärke des Audiogeräts"
+  },
+  "Category": "Discord",
+  "Localization": {
+    "请启动Discord":"Bitte starten Sie Discord",
+    "请求授权":"Autorisierung anfordern",
+    "授权":"Ermächtigung",
+    "服务器":"Server",
+    "文本通道":"Textkanäle",
+    "设备":"Ausrüstung",
+    "输入":"Eingabe",
+    "输出":"Ausgabe",
+    "音量":"Volumen",
+    "语音通道":"Sprachkanäle",
+    "获取ID": "Holen ID",
+    "CLIENT ID": "CLIENT ID",
+    "https://discord.com/developers/applications": "https://discord.com/developers/applications"
+  }
+}

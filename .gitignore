@@ -1,0 +1,5 @@
+com.mirabox.streamdock.discord.sdPlugin/plugin/node_modules/
+!com.mirabox.streamdock.discord.sdPlugin/plugin/node_modules/discord-rpc
+com.mirabox.streamdock.discord.sdPlugin/plugin/log/
+com.mirabox.streamdock.discord.sdPlugin/plugin/build/
+com.mirabox.streamdock.discord.sdPlugin/plugin/data/
