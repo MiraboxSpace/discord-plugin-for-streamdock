@@ -1,0 +1,48 @@
+{
+  "Name": "Discord",
+  "Description": "Prenez le contrôle de Discord",
+  "com.hotspot.streamdock.discord.deaf": {
+    "Name": "Les écouteurs sont en sourdine",
+    "Tooltip": "Le son du casque est activé/désactivé"
+  },
+  "com.hotspot.streamdock.discord.mute": {
+    "Name": "Le micro est coupé",
+    "Tooltip": "Désactiver/réactiver le microphone"
+  },
+  "com.hotspot.streamdock.discord.voicechannel": {
+    "Name": "Canaux vocaux",
+    "Tooltip": "Rejoindre le canal vocal"
+  },
+  "com.hotspot.streamdock.discord.textchannel": {
+    "Name": "Canaux de texte",
+    "Tooltip": "Rejoindre le canal texte"
+  },
+  "com.hotspot.streamdock.discord.pushtotalk": {
+    "Name": "Appuyer pour couper le micro",
+    "Tooltip": "Appuyer pour couper le micro"
+  },
+  "com.hotspot.streamdock.discord.pushtomute": {
+    "Name": "Appuyer pour parler",
+    "Tooltip": "Appuyer pour parler"
+  },
+  "com.hotspot.streamdock.discord.volumeControl": {
+    "Name": "Contrôle du volume",
+    "Tooltip": "Contrôler le volume des périphériques audio"
+  },
+  "Category": "Discord",
+  "Localization": {
+    "请启动Discord":"Veuillez lancer Discord",
+    "请求授权":"Demander une autorisation",
+    "授权":"Autorisation",
+    "服务器":"Serveur",
+    "文本通道":"Canaux de texte",
+    "设备":"équipement",
+    "输入":"Entrer",
+    "输出":"Sortir",
+    "音量":"Volume",
+    "语音通道":"Canaux vocaux",
+    "获取ID": "Chercher ID",
+    "CLIENT ID": "CLIENT ID",
+    "https://discord.com/developers/applications": "https://discord.com/developers/applications"
+  }
+}

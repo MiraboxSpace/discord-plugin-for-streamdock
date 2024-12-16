@@ -1,0 +1,8 @@
+[2024-12-12T14:40:20.919] [ERROR] default - 执行错误: Error: Command failed: C:\Users\OptiPlex\AppData\Roaming\HotSpot\StreamDock\plugins\com.mirabox.streamdock.discord.sdPlugin\plugin\app.exe ./index.js 18618 8YEK4L1DQ12WBIE1242ER6603Z7C73T7 registerPlugin zh_CN
+
+[2024-12-12T14:46:42.288] [ERROR] default - 执行错误: Error: Command failed: C:\Users\OptiPlex\AppData\Roaming\HotSpot\StreamDock\plugins\com.mirabox.streamdock.discord.sdPlugin\plugin\app.exe ./index.js 18618 W4L3G3NF7622LEJ3K4V95O6264WHHCR7 registerPlugin zh_CN
+
+[2024-12-12T14:48:45.182] [ERROR] default - 执行错误: Error: Command failed: C:\Users\OptiPlex\AppData\Roaming\HotSpot\StreamDock\plugins\com.mirabox.streamdock.discord.sdPlugin\plugin\app.exe ./index.js 18618 46DX203II1IEA3PUUG4638NY1AH66J64 registerPlugin zh_CN
+
+[2024-12-12T14:50:47.370] [ERROR] default - 执行错误: Error: Command failed: C:\Users\OptiPlex\AppData\Roaming\HotSpot\StreamDock\plugins\com.mirabox.streamdock.discord.sdPlugin\plugin\app.exe ./index.js 18618 9DHLZU5Z24JVX116ZI3XSNMW686ED8D0 registerPlugin zh_CN
+
