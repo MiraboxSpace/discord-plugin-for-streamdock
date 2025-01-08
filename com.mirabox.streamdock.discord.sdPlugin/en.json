@@ -18,12 +18,12 @@
     "Tooltip": "Go to a text channel"
   },
   "com.hotspot.streamdock.discord.pushtotalk": {
-    "Name": "Push to Mute",
-    "Tooltip": "Press and hold to mute"
-  },
-  "com.hotspot.streamdock.discord.pushtomute": {
     "Name": "Push to Talk",
     "Tooltip": "Press and hold to talk"
+  },
+  "com.hotspot.streamdock.discord.pushtomute": {
+    "Name": "Push to Mute",
+    "Tooltip": "Press and hold to mute"
   },
   "com.hotspot.streamdock.discord.volumeControl": {
     "Name": "Volume Control",
