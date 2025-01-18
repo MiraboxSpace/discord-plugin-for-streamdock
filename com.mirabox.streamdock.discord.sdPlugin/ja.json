@@ -45,6 +45,14 @@
     "Name": "サウンドボード",
     "Tooltip": "discordサウンドボードを再生する"
   },
+  "com.hotspot.streamdock.discord.mutecontrol": {
+    "Name": "マイク制御",
+    "Tooltip": "マイク制御"
+  },
+  "com.hotspot.streamdock.discord.deafcontrol": {
+    "Name": "ヘッドセット制御",
+    "Tooltip": "ヘッドセット制御"
+  },
   "Category": "Discord",
   "Localization": {
     "请启动Discord": "Discordを起動してください",

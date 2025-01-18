@@ -45,6 +45,14 @@
     "Name": "语音板",
     "Tooltip": "语音板"
   },
+  "com.hotspot.streamdock.discord.mutecontrol": {
+    "Name": "麦克风控制",
+    "Tooltip": "麦克风控制"
+  },
+  "com.hotspot.streamdock.discord.deafcontrol": {
+    "Name": "耳机控制",
+    "Tooltip": "耳机控制"
+  },
   "Category": "Discord",
   "Localization": {
     "请启动Discord": "请启动Discord",

@@ -41,6 +41,18 @@
     "Name": "Controle de volume do usuário",
     "Tooltip": "Controle de volume do usuário"
   },
+  "com.hotspot.streamdock.discord.action1": {
+    "Name": "Painel de voz",
+    "Tooltip": "Painel de voz"
+  },
+  "com.hotspot.streamdock.discord.mutecontrol": {
+    "Name": "Controle de microfone",
+    "Tooltip": "Controle de microfone"
+  },
+  "com.hotspot.streamdock.discord.deafcontrol": {
+    "Name": "Controle de fones de ouvido",
+    "Tooltip": "Controle de fones de ouvido"
+  },
   "Category": "Discord",
   "Localization": {
     "请启动Discord": "Por favor inicie o discord",
