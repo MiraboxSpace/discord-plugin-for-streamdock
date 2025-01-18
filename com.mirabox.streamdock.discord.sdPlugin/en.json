@@ -45,6 +45,14 @@
     "Name": "Soundboard",
     "Tooltip": "Soundboard"
   },
+  "com.hotspot.streamdock.discord.mutecontrol": {
+    "Name": "Mute Control",
+    "Tooltip": "Mute Control"
+  },
+  "com.hotspot.streamdock.discord.deafcontrol": {
+    "Name": "Deaf Control",
+    "Tooltip": "Deaf Control"
+  },
   "Category": "Discord",
   "Localization": {
     "请启动Discord": "Please start Discord",
