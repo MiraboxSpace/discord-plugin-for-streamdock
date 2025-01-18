@@ -97,7 +97,7 @@
         {
           "FontSize": "12",
           "TitleAlignment": "bottom",
-          "Image": "static/icon/15.png"
+          "Image": "static/icon/15"
         }
       ],
       "UserTitleEnabled": false,
