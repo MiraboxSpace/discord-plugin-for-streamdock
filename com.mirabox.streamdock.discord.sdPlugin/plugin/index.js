@@ -10,6 +10,17 @@ const eventEmitter = new EventEmitter();
 let client = null;
 const contexts = []
 
+//##################################################
+//##################全局异常捕获#####################
+process.on('uncaughtException', (error) => {
+    log.error('Uncaught Exception:', error);
+});
+process.on('unhandledRejection', (reason) => {
+    log.error('Unhandled Rejection:', reason);
+});
+//##################################################
+//##################################################
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const login = async () => {
     try {
@@ -365,6 +376,8 @@ plugin.mutecontrol = new Actions({
             client?.getVoiceSettings().then((res) => {
                 try {
                     res.mute = !res.mute
+                    //这个里面报错，切换一下输入和输出设备就解决了
+                    // id'child "input" fails because [child "device_id" fails because ["device_id" must be one of [default, {0.0.1.00000000}.{c41d0a6b-997d-49ad-bba0-a918eb6f6561}, {0.0.1.00000000}.{2d6c5eb9-1305-4c5a-af68-c48c63c2db7a}]]]'
                     client?.setVoiceSettings(res)
                     // log.info("设置VoiceSettings")
                     if (res.mute) {
