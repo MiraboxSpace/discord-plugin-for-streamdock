@@ -65,5 +65,5 @@ $dom.select2.on('change', (e) => {
 })
 
 $dom.logout.on('click', () => {
-    $websocket.openUrl('http://127.0.0.1:3002/logout')
+    $websocket.openUrl('http://127.0.0.1:26432/logout')
 })

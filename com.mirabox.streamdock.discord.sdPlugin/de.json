@@ -90,6 +90,7 @@
     "静音/取消静音": "Stummschalten / Stummschaltung aufheben",
     "连接次数过多请重新启动Discord": "Zu viele Verbindungsversuche, bitte starten Sie Discord neu",
     "CLIENT ID": "CLIENT ID",
+    "info": "Der Serverport wurde von 3002 auf 26432 geändert. Bitte aktualisieren Sie die Weiterleitungs-URL im Admin-Panel der App. Wir entschuldigen uns für die Unannehmlichkeiten.",
     "https://discord.com/developers/applications": "https://discord.com/developers/applications"
   }
 }

@@ -160,11 +160,12 @@ plugin.mute = new Actions({
                     if (res?.mute) {
                         plugin.setState(context, 1);
                     } else {
-                        plugin.setState(context, 0);
-                    }
-                    //只要耳机静音麦克风必须静音
-                    if (res?.deaf) {
-                        plugin.setState(context, 1);
+                        //只要耳机静音麦克风必须静音
+                        if (res?.deaf) {
+                            plugin.setState(context, 1)
+                        } else {
+                            plugin.setState(context, 0)
+                        }
                     }
                 }).catch((error) => {
                     log.error('getVoiceSettings failed:', error);
@@ -177,12 +178,11 @@ plugin.mute = new Actions({
                             // log.info(data)
                             plugin.setState(context, 1)
                         } else {
-                            plugin.setState(context, 0)
-                        }
-                        //耳机静音的时候进入了这，但是麦克风mute=true所以图标没改
-                        //所以做一下处理只要耳机静音麦克风必须静音
-                        if (data?.deaf) {
-                            plugin.setState(context, 1)
+                            if (data?.deaf) {
+                                plugin.setState(context, 1)
+                            } else {
+                                plugin.setState(context, 0)
+                            }
                         }
                     } catch (error) {
                         log.error(error);
@@ -208,8 +208,9 @@ plugin.mute = new Actions({
             //设置麦克风静音或解除静音
             client?.getVoiceSettings().then((res) => {
                 try {
+                    log.info(res)
                     res.mute = !res.mute
-                    client?.setVoiceSettings(res)
+                    client?.setVoiceSettings({ mute: res.mute })
                     // log.info("设置VoiceSettings")
                     if (res.mute) {
                         plugin.setState(context, 1)
@@ -275,10 +276,7 @@ plugin.deaf = new Actions({
         //设置耳机静音或解除静音
         client?.getVoiceSettings().then((res) => {
             res.deaf = !res.deaf
-            if (res.deaf) {
-                res.mute = true
-            }
-            client?.setVoiceSettings(res)
+            client?.setVoiceSettings({ deaf: res.deaf })
             if (res.deaf) {
                 plugin.setState(context, 1)
             } else {
@@ -539,14 +537,36 @@ plugin.voicechannel = new Actions({
     },
     keyUp({ context, payload }) {
         // log.info(payload)
-        client?.selectVoiceChannel(payload.settings.channel).then((res) => {
-            log.info("连接语音通道：" + payload.settings.channel)
-        }).catch((error) => {
-            if (error.code == 5003) {
+        client?.GET_SELECTED_VOICE_CHANNEL().then((res) => {
+            if (res == undefined || res == null) {
+                client?.selectVoiceChannel(payload.settings.channel).then((res) => {
+                    log.info("连接语音通道：" + payload.settings.channel)
+                    plugin.showOk(context);
+                }).catch((error) => {
+                    if (error.code == 4006) {
+                        plugin.showAlert(context);
+                    }
+                    log.error('getChannels failed:', error);
+                });
                 return;
             }
-            log.error('getChannels failed:', error);
+            if (res.id == payload.settings.channel) {
+                client?.selectVoiceChannel(null).then((res) => { });
+                plugin.showOk(context);
+            } else {
+                client?.selectVoiceChannel(null).then((res) => { });
+                client?.selectVoiceChannel(payload.settings.channel).then((res) => {
+                    plugin.showOk(context);
+                    log.info("连接语音通道：" + payload.settings.channel)
+                }).catch((error) => {
+                    if (error.code == 4006) {
+                        plugin.showAlert(context);
+                    }
+                    log.error('getChannels failed:', error);
+                });
+            }
         });
+
     },
 });
 
@@ -1082,7 +1102,7 @@ function startServer() {
 
     const app = express();
     app.use(cors());
-    const port = 3002;
+    const port = 26432;
 
     app.get('/', async (req, res) => {
         log.info('callback')
@@ -1094,8 +1114,8 @@ function startServer() {
     app.get('/authorization', (req, res) => {
         // log.info(req.query)
         id = req.query.clientId
-        res.redirect(`https://discord.com/oauth2/authorize?client_id=${id}&response_type=token&redirect_uri=http%3A%2F%2F127.0.0.1%3A3002&scope=identify+rpc+rpc.voice.read+rpc.notifications.read+messages.read+rpc.voice.write`)
-        // res.redirect(`https://discord.com/oauth2/authorize?client_id=${id}&response_type=token&redirect_uri=http%3A%2F%2F127.0.0.1%3A3002&scope=identify+rpc+rpc.voice.read+messages.read+rpc.notifications.read+rpc.voice.write`)
+        res.redirect(`https://discord.com/oauth2/authorize?client_id=${id}&response_type=token&redirect_uri=http%3A%2F%2F127.0.0.1%3A26432&scope=identify+rpc+rpc.voice.read+rpc.notifications.read+messages.read+rpc.voice.write`)
+        // res.redirect(`https://discord.com/oauth2/authorize?client_id=${id}&response_type=token&redirect_uri=http%3A%2F%2F127.0.0.1%3A26432&scope=identify+rpc+rpc.voice.read+messages.read+rpc.notifications.read+rpc.voice.write`)
     })
 
 

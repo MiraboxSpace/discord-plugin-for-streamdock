@@ -6,7 +6,7 @@ Click this link to jump to the discord dev
 
 <img src="./3.png">
 
-Create an app and add a redirect address: http://127.0.0.1:3002
+Create an app and add a redirect address: http://127.0.0.1:26432
 
 <img src="./4.png">
 

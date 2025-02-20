@@ -9,11 +9,11 @@ const log = require('log4js').configure({
     }
 }).getLogger();
 
-// 主线程同步错误处理
-process.on('uncaughtException', (err) => {
-    log.error("系统错误", err);
-    process.exit();
-});
+// // 主线程同步错误处理
+// process.on('uncaughtException', (err) => {
+//     log.error("系统错误", err);
+//     process.exit();
+// });
 
 // 插件类
 const ws = require('ws');
@@ -83,6 +83,20 @@ class Plugins {
         this.ws.send(JSON.stringify({
             event: "setSettings",
             context, payload
+        }));
+    }
+
+    showAlert(context) {
+        this.ws.send(JSON.stringify({
+            event: "showAlert",
+            context
+        }));
+    }
+
+    showOk(context) {
+        this.ws.send(JSON.stringify({
+            event: "showOk",
+            context
         }));
     }
     // 发送给属性检测器

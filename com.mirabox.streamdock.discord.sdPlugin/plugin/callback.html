@@ -40,7 +40,7 @@
 
     localStorage.setItem('oauth2_token', data);
 
-    axios.post('http://localhost:3002/data', data)
+    axios.post('http://localhost:26432/data', data)
       .then(res => {
         console.log(res.data);
       })
