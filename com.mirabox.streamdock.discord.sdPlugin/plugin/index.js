@@ -303,12 +303,14 @@ plugin.mutecontrol = new Actions({
                     if (res?.mute) {
                         plugin.setState(context, 1);
                     } else {
-                        plugin.setState(context, 0);
+                        if (res?.deaf) {
+                            plugin.setState(context, 1);
+                        } else {
+                            plugin.setState(context, 0);
+                        }
                     }
                     //只要耳机静音麦克风必须静音
-                    if (res?.deaf) {
-                        plugin.setState(context, 1);
-                    }
+
                 }).catch((error) => {
                     log.error('getVoiceSettings failed:', error);
                 });
@@ -320,13 +322,14 @@ plugin.mutecontrol = new Actions({
                             // log.info(data)
                             plugin.setState(context, 1)
                         } else {
-                            plugin.setState(context, 0)
+                            if (data?.deaf) {
+                                plugin.setState(context, 1)
+                            } else {
+                                plugin.setState(context, 0)
+                            }
                         }
                         //耳机静音的时候进入了这，但是麦克风mute=true所以图标没改
                         //所以做一下处理只要耳机静音麦克风必须静音
-                        if (data?.deaf) {
-                            plugin.setState(context, 1)
-                        }
                     } catch (error) {
                         log.error(error);
                     }
@@ -357,7 +360,7 @@ plugin.mutecontrol = new Actions({
                     } else if (res.input.volume < 0) {
                         res.input.volume = 0;
                     }
-                    client?.setVoiceSettings(res);
+                    client?.setVoiceSettings({ input: res.input });
                 } catch (error) {
                     log.error(error);
                 }
@@ -376,7 +379,7 @@ plugin.mutecontrol = new Actions({
                     res.mute = !res.mute
                     //这个里面报错，切换一下输入和输出设备就解决了
                     // id'child "input" fails because [child "device_id" fails because ["device_id" must be one of [default, {0.0.1.00000000}.{c41d0a6b-997d-49ad-bba0-a918eb6f6561}, {0.0.1.00000000}.{2d6c5eb9-1305-4c5a-af68-c48c63c2db7a}]]]'
-                    client?.setVoiceSettings(res)
+                    client?.setVoiceSettings({ mute: res.mute })
                     // log.info("设置VoiceSettings")
                     if (res.mute) {
                         plugin.setState(context, 1)
@@ -450,7 +453,7 @@ plugin.deafcontrol = new Actions({
                     } else if (res.output.volume < 0) {
                         res.output.volume = 0;
                     }
-                    client?.setVoiceSettings(res);
+                    client?.setVoiceSettings({ output: res.output });
                 } catch (error) {
                     log.error(error);
                 }
@@ -465,10 +468,7 @@ plugin.deafcontrol = new Actions({
         //设置耳机静音或解除静音
         client?.getVoiceSettings().then((res) => {
             res.deaf = !res.deaf
-            if (res.deaf) {
-                res.mute = true
-            }
-            client?.setVoiceSettings(res)
+            client?.setVoiceSettings({ deaf: res.deaf})
             if (res.deaf) {
                 plugin.setState(context, 1)
             } else {
