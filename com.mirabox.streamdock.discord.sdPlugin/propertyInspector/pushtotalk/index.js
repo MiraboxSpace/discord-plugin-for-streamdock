@@ -43,7 +43,7 @@ const $propEvent = {
 
 $dom.authorizeBtn.on('click', (e) => {
     if ($dom.clientId.value != null && $dom.clientId.value != '') {
-        $websocket.openUrl("http://127.0.0.1:3002/authorization?clientId=" + $dom.clientId.value)
+        $websocket.openUrl("http://127.0.0.1:26432/authorization?clientId=" + $dom.clientId.value)
     }
 })
 

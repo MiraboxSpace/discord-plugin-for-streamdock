@@ -89,6 +89,7 @@
     "静音/取消静音": "Ativar microfone/Desativar microfone",
     "连接次数过多请重新启动Discord": "Muitas conexões, por favor, reinicie o Discord",
     "CLIENT ID": "CLIENT ID",
+    "info": "O serviço de porta foi alterado de 3002 para 26432. Por favor, vá para o backend do aplicativo para alterar a URL de redirecionamento. Lamentamos o inconveniente que você sofreu.",
     "View the tutorial": "Visualizar tutorial",
     "https://discord.com/developers/applications": "https://discord.com/developers/applications"
   }

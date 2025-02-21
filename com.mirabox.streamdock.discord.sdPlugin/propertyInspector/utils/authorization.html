@@ -55,12 +55,18 @@
             cursor: pointer;
         }
 
-        .info{
+        .info,
+        .info2 {
             cursor: pointer;
             color: rgb(88, 101, 242);
             line-height: 30px;
             display: flex;
             justify-content: center;
+            text-align: center;
+        }
+
+        .info2 {
+            color: red;
         }
     </style>
 </head>
@@ -80,6 +86,7 @@
             <button class="sdpi-item-value" id="authorizeBtn">请求授权</button>
         </div>
         <span class="info">View the tutorial</span>
+        <span class="info2">info</span>
     </form>
 </body>
 <script>
@@ -87,7 +94,7 @@
     const clientId = document.querySelector("#clientId");
     document.querySelector("#authorizeBtn").addEventListener('click', (e) => {
         if (clientId.value != null && clientId.value != '') {
-            $websocket.openUrl("http://127.0.0.1:3002/authorization?clientId=" + clientId.value)
+            $websocket.openUrl("http://127.0.0.1:26432/authorization?clientId=" + clientId.value)
             window.close();
         }
     })
@@ -119,8 +126,8 @@
             item.placeholder = $lang[item.placeholder];
         }
     };
-    $('input', true).forEach(translate);
-    $('textarea', true).forEach(translate);
+    document.querySelectorAll('input').forEach(translate);
+    document.querySelectorAll('textarea').forEach(translate);
 </script>
 
 </html>
