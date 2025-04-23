@@ -1,15 +1,5 @@
-# How to use?
+The warehouse has been integrated into [https://github.com/MiraboxSpace/StreamDock-Device-SDK](https://github.com/MiraboxSpace/StreamDock-Plugins/tree/main/Plugins/Discord)
 
-## 1. Get Client ID
+Please move in the future [https://github.com/MiraboxSpace/StreamDock-Plugins/tree/main/Plugins/Discord](https://github.com/MiraboxSpace/StreamDock-Plugins/tree/main/Plugins/Discord)
 
-Click this link to jump to the discord dev
-
-<img src="./3.png">
-
-Create an app and add a redirect address: http://127.0.0.1:26432
-
-<img src="./4.png">
-
-## 2. Authorization
-
-After copying the ID, fill it into the discord plugin and click Request Authorization to authorize it before use.
+After a while, this repository will be deleted
